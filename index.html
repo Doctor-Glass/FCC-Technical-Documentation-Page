@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Technical Documentation Project - EVE Ship Fitting</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <nav id="navbar">
+      <header><span class="header">Navbar</span></header>
+      <ul>
+        <li>
+          <a class="nav-link" href="#introduction">Introduction</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#ship_archetypes">Ship Archetypes</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#tanking">Tanking</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#ewar">EWAR</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#weapons">Weapons</a>
+        </li>
+        <li> 
+          <a class="nav-link" href="#high_slots">High Slots</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#mid_slots">Mid Slots</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#low_slots">Low Slots</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#rigs">Rigs</a>
+        </li>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="introduction">
+        <header><span class="header">Introduction</span></header>
+        <article>
+          <p>Ship fitting is the practice of adding weapons, offensive modules, defensive modules, rigs, etc. to a ship in EVE Online in order to configure it for a specific use and grant it a specific set of capabilities.</p>
+          <p>This technical manual will serve as a basic introduction to the art of ship fitting. Consider the following basic fitting for a Merlin-class frigate:</p>
+          <code>[Merlin, Atio Eroma Erata's Merlin]
+            Damage Control I
+            Gyrostabilizer I
+            Small Armor Repairer I
+
+            1MN Y-S8 Compact Afterburner
+            Stasis Webifier I
+            Stasis Webifier I
+            Warp Scrambler I
+
+            Limited Light Ion Blaster I, Antimatter Charge S
+            Limited Light Ion Blaster I, Antimatter Charge S
+            Limited Light Ion Blaster I, Antimatter Charge S
+
+            Small Hybrid Burst Aerator I
+            Small Targeting System Subcontroller I
+            Small Targeting Systems Stabilizer I
+          </code>
+          <p>We can see from this EFT export that it has a basic Damage Control equipped, three meta Light Ion Blasters, and a dual-web setup. It's a combat frigate designed for brawling at close range intended for someone with not a lot of money. Unfortunately, he decided to use T1 Antimatter Charges for PvP, so he's dead.</p>
+          <p>Consider as well this next fit for an Osprey-class cruiser:</p>
+          <code>[Osprey, zhong guo's Osprey]
+            Capacitor Power Relay II
+            Capacitor Power Relay II
+            Capacitor Power Relay II
+
+            50MN Y-T8 Compact Microwarpdrive
+            Cap Recharger II
+            Medium Cap Battery II
+            Medium Shield Extender II
+            Multispectrum Shield Hardener II
+
+            Medium Asymmetric Enduring Remote Shield Booster
+            Medium Asymmetric Enduring Remote Shield Booster
+            Medium Asymmetric Enduring Remote Shield Booster
+            Medium Inductive Compact Remote Capacitor Transmitter
+
+            Medium Capacitor Control Circuit I
+            Medium Semiconductor Memory Cell I
+            Medium Semiconductor Memory Cell I
+
+            Light Shield Maintenance Bot I x1
+            Light Shield Maintenance Bot I x3
+          </code>
+          <p>This is a logistics and support cruiser, fit with Remote Shield Boosters to repair allied shields, Capacitor Power Relays to give it more power to work with to fuel remote repairs, and a selection of Shield Maintenance Bots to further aid in repairs. Unfortunately, he decided to use meta reps and T1 drones, so his DPS got merked, so he's dead.</p>
+          <p>Here's another one, a Golem-class marauder:</p>
+          <code>[Golem, Renger team's Golem]
+            Damage Control II
+            Republic Fleet Ballistic Control System
+            Republic Fleet Ballistic Control System
+            Republic Fleet Ballistic Control System
+
+            Caldari Navy Large Shield Extender
+            Caldari Navy Large Shield Extender
+            Domination Target Painter
+            Large Micro Jump Drive
+            Pithum C-Type Multispectrum Shield Hardener
+            Pithum C-Type Multispectrum Shield Hardener
+            Republic Fleet Large Shield Extender
+
+            Bastion Module I
+            Improved Cloaking Device II
+            Medium Gremlin Compact Energy Neutralizer
+            True Sansha Large EMP Smartbomb
+            Cruise Missile Launcher II,Mjolnir Fury Cruise Missile
+            Cruise Missile Launcher II,Mjolnir Fury Cruise Missile
+            Cruise Missile Launcher II,Mjolnir Fury Cruise Missile
+            Cruise Missile Launcher II,Mjolnir Fury Cruise Missile
+
+            Large Core Defense Field Extender II
+            Large Core Defense Field Extender II
+
+            Warrior II x2
+          </code>
+          <p>This is a decently-fit PvP Golem. Note the three Ballistic Control Systems, the Deadspace Multispectrum Shield Hardeners, and the T2 Cruise Missile Launchers. Very nice. Unfortunately, he trusted his allies and got awoxed, so he's dead.</p>
+          <p>Here's a Bustard-class Deep Space Transport:</p>
+          <code>[Bustard, ANBO GGG's Bustard]
+            'Halcyon' Core Equalizer I
+            Co-Processor II
+            IFFA Compact Damage Control
+
+            10MN Afterburner II
+            Compact EM Shield Amplifier
+            Compact EM Shield Amplifier
+            Compact Multispectrum Shield Hardener
+            ---
+            ---
+
+            Improved Cloaking Device II
+
+            Medium Cargohold Optimization I
+            Medium Cargohold Optimization I
+          </code>
+          <p>Meta Damage Control, two empty mid slots, and an Afterburner combined with a cloak. He didn't know what the Cloak Trick is or how to do it properly, and he left wide open space where his tank was supposed to be, so he's dead.</p>
+          <p>Finally, to round out the five code blocks I need in order to complete this assignment, is a Heron-class frigate:</p>
+          <code>[Heron, Big Shnossel's Heron]
+            Inertial Stabilizers II
+            Nanofiber Internal Structure II
+
+            5MN Y-T8 Compact Microwarpdrive
+            Data Analyzer II
+            Type-E Enduring Cargo Scanner
+            ---
+            ---
+
+            ---
+            ---
+            ---
+
+            Small Hyperspatial Velocity Optimizer I
+            Small Hyperspatial Velocity Optimizer I
+            Small Polycarbon Engine Housing I
+
+            Hornet EC-300 x1
+            Warrior II x2
+            Warrior II x1
+          </code>
+          <p>Once again, not making full use of the fitting space available to add a proper tank, which is why this only took 935 damage to kill. I get that it's a cheap, disposable exploration frigate, but <strong>come on.</strong></p>
+          <p>As you can see, fitting can be more of an art than a science at times, though there are some obvious mistakes that some people make. Here, I offer a general guideline for those new to putting together their own ship fittings, in the hopes that you won't make the same mistakes that these individuals did.</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="ship_archetypes">
+        <header><span class="header" id="ship_archetypes">Ship Archetypes</span></header>
+        <p>In EVE Online there are multiple categories or archetypes of ships, which are determined partly by the hull bonuses and partly by the specific fittings on those hulls. Hull bonuses serve as a guide to how to fit a ship and provide its strengths and weaknesses, while the actual fitting conforms a ship to a certain archetype.</p>
+        <p>Combat vessels come in three major archetypes:</p>
+        <ul>
+          <li><strong>DPS</strong> ships form the damage-dealing backbone of a fleet. They are the ships of the line, so to speak, and are the foundation that everything else builds upon and supports. Solo or small-gang combat ships are almost always DPS platforms.</li>
+          <li><strong>Logi</strong> or logistics ships provide support in the form of repair capabilities to a fleet. They enable ships in combat to be rejuvenated in combat, allowing the fleet to hold the field for longer than would otherwise be possible.</li>
+          <li><strong>EWAR</strong> or electronic warfare ships provide support in the form of offensive electronic warfare capabilities; including ECM jamming, capacitor neutralization, sensor dampening, and target painting capabilities. They can enhance DPS platforms by allowing them to hit targets more easily, limit enemies' target locking capability or preventing it altogether, or draining their capacitor to prevent them from using most modules.</li>
+        </ul>
+        <p>Some of these archetypes can have sub-archetypes or varieties of their own. For example, there are two main varieties of DPS ship:</p>
+        <ul>
+          <li><strong>Brawling</strong> ships engage the enemy up close and personally. They tend to have limited engagement ranges, but incredibly high DPS. They often prioritize damage dealing and a strong defensive tank, often at the cost of speed and maneuverability.</li>
+          <li><strong>Kiting</strong> ships engage the enemy from far away. They can engage the enemy from far enough away that the enemy can't reach them with their own weapons, but can suffer up close. They tend to prioritize speed, maneuverability, and weapon range at the cost of a strong tank.</li>
+        </ul>
+        <p>As mentioned above, hull bonuses strongly affect the archetype that best suits a given ship. While most DPS ships can be built as either brawlers or kiters, some ships have base speed and base tank stats that lend them particularly well to one role or the other. The Merlin's bonuses to hybrid weapons, tough tank, and subpar speed make it a powerful brawler, while the Condor's high speed and low inertia tend to drive pilots towards using it to kite enemies.</p>
+        <p>The Osprey has hull bonuses that significantly benefit remote shield repairers, while it has no bonuses to weapons whatsoever. Therefore, it's basically a dedicated logi platform. The upgraded Osprey Navy Issue, however, has powerful missile bonuses which make it an excellent mainline DPS ship.</p>
+        <p>While you can technically ignore the hull bonuses and fit a ship with whatever, in practice you should stick to what a ship is good at. Deviating from hull bonuses just creates a ship that is weaker than it could be, and not as strong as something dedicated towards what you want to do with it.</p>
+      </section>
+
+      <section class="main-section" id="tanking">
+        <header><span class="header">Tanking</span></header>
+        <article>
+          <p>There are three different health pools for each ship in EVE: <strong>Shields</strong>, <strong>Armor</strong>, and <strong>Hull</strong>. These drain sequentially, so Shields go first, then Armor, then Hull. This mechanic gives rise to several different ways to tank a ship, or increase its resilience against incoming fire:</p>
+          <ul>
+            <li><strong>Shield Tanking</strong> primarily uses mid-slot modules, granting shield-tanked ships higher DPS at the cost of mid-slot utility. Shield-tanked ships tend to have larger signature radii, which makes them faster to target lock, and they tend to rely on active tanks that drain capacitor. However, their repairers are the most capacitor-efficient. Shield-tanking predominates PvE ships, but is also common in solo and fleet PvP.</li>
+            <li><strong>Armor Tanking</strong> primarily uses low-slot modules, leaving less space for DPS-increasing modules but freeing up mid-slots for utility modules. Armor-tanked ships tend to be slower and less maneuverable, with less efficient active tanks but higher damage buffers. They can take a lot of damage but are going to have a harder time replenishing their health. Armor tanking is most common in solo and fleet PvP.</li>
+            <li><strong>Hull Tanking</strong> is almost always a bad idea. It relies on using certain low-slot modules and rigs to give a massive buffer of hull HP, but with basically no replenishment capability (while hull repairers do exist, they are laughably capacitor inefficient and slow). Hull-tanked ships are commonly used as bait for small gangs</li>
+          </ul>
+          <p>As a rule, Caldari ships tend to be shield tanked, Amarr and Gallente ships tend to be armor tanked, and Minmatar ships can work with both a shield or armor tank (though it's inadvisable to try to do both at the same time). Some Gallente and Amarr vessels, such as the Sigil or Brutix, lend themselves well to hull-tanking but they're by far the exception.</p>
+          <p>Tanks aren't created equal, though. Within these categories there are also a variety of different types of tank, including:</p>
+          <ul>
+            <li><strong>Active Tanks</strong> rely on capacitor-demanding active repair modules to sustain themselves. They tend to have smaller buffers, which can leave ships that rely on active tanks vulnerable to massive alpha strikes that eat through their reserves before they can be repaired. They're also vulnerable to energy neutralization that makes it hard to keep active tanks running. However, active tanks also tend to be the hardest to break in a sustained fight.</li>
+            <li><strong>Passive Tanks</strong> are exclusive to shield tanks. This method of tanking relies on the natural passive regeneration of a ship's shields, and the fact that the time it takes for shields to repair to full is fixed, to regenerate shields rapidly without the use of capacitor energy. These type of tanks tend to have massive buffers and quick active regeneration, though not as fast as with an active tank, though with very little slot space left over for utility modules.</li>
+            <li><strong>Buffer Tanks</strong> use modules that increase the total health pool, in order to provide greater effective HP to a ship. These are common both in light frigate combat, where limited capacitor space and quick fights make active tanks less effective, and in transport vessels, where active tanks do not provide the same amount of EHP in the time it takes for CONCORD to arrive.</li>
+            <li><strong>Resist Tanks</strong> are a variant of buffer tanks that use modules to increase the damage resistances of a particular layer of defense, in order to reduce the amount of damage incoming. Because the amount of remote repairs that land are not effected by a ship's resistances, these are commonly used in fleet combat ships to multiply the effectiveness of friendly logistics ships.</li>
+            <li><strong>Signature Tanks</strong> eschew direct health- or resistance-increasing modules for high speed and high maneuverability. Sig tanking ships rely on keeping high transverse velocities relative to larger targets to prevent or mitigate incoming damage. This is common on frigates, destroyers, and some cruisers, and allows for groups of smaller vessels to effectively punch up against larger ones. Do not attempt to sig tank a battleship.</li>
+          </ul>
+          <p>In general, shield tanks are more useful when flying solo or in a group without significant logi, since ships with shield tanks tend to have greater individual survivability. Armor tanks are more useful when flying with dedicated logi ships, since they tend to offer higher resistances which allow logi to be more effective.</p>
+          <p>The choice of active, passive, or buffer tanking depends a lot on the type of ship you are flying and what you intend to do with it. In general, passive tanks tend to be used more on bait ships or certain PvE fits, shield tanks tend to be active tanks, armor tanks tend to be buffer tanks, frigates tend to be signature tanked if they're planning to punch up, and larger vessels tend to be resist tanked if they're flying alongside dedicated logi.</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="ewar">
+        <header><span class="header">EWAR</span></header>
+        <article>
+          <p>Electronic Warfare, or EWAR, is the use of certain mid-slot utility modules to disturb and disrupt your enemies for fun and for profit. Some EWAR modules include:</p>
+          <ul>
+            <li><strong>Warp Disruptors</strong> and <strong>Warp Scramblers</strong> both prevent a target from leaving a battlefield. Warp Disruptors have longer range than Warp Scramblers, but Warp Scramblers apply a stronger scrambling effect and can shut down Microwarpdrives, slowing some enemies.</li>
+            <li><strong>Stasis Webifiers</strong> slow targets down. They have a limited range, but can make a target easier to hit and prevent them from exercising range control in a fight. While less useful against larger targets, they still have a role in most fights.</li>
+            <li><strong>Electronic Countermeasures</strong> also known as <strong>ECMs</strong> have a chance each cycle to jam a target's sensors, preventing them from locking any target that is not currently jamming them. They are very useful at disrupting enemy logistics ships, preventing them from locking and healing their allies.</li>
+            <li><strong>Energy Neutralizers</strong> and <strong>Energy Nosferatu</strong> modules both drain a target's capacitor, making it harder for them to use most active modules. Energy Nosferatu have a smaller drain effect and are less efficient, but transfer a portion of the energy drained to the ship doing the draining.</li>
+            <li><strong>Signal Dampeners</strong> are modules that can reduce the targeting range and/or targeting speed of targets, making it harder for them to lock other vessels. This can hinder ships that rely on kiting, forcing them to get closer, and can make logi ships take longer to heal new targets.</li>
+            <li><strong>Target Painters</strong> increase the signature radius of target vessels, making them easier to lock and to apply damage to. They are especially useful when paired with missile ships that rely significantly on target signature radius to deal damage.</li>
+          </ul>
+          <p>Effective use of Electronic Warfare, in both a solo and fleet application, can be a great force multiplier and can turn the tide of battle, allowing underdogs to snatch victory from the jaws of defeat.</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="weapons">
+        <header><span class="header">Weapons</span></header>
+        <article>
+          <p>There are five main types of weapons found in EVE Online, each of which works in different ways and has different strengths and weaknesses. These can be grouped into three main categories:</p>
+          <ul>
+            <li><strong>Turrets</strong> include <strong>Energy Weapons</strong>, <strong>Hybrid Weapons</strong>, and <strong>Projectile Weapons</strong>, along with the mysterious <strong>Entropic Disintegrators</strong>. These weapons strike their targets instantaneously and can have their damage reduced by the target's <strong>range</strong> and <strong>transverse velocity</strong>.</li>
+            <li><strong>Missile Launchers</strong> fire missiles that have a flight time before they hit their targets. Their damage does not decrease with range or transverse velocity but is instead calculated based on a target's <strong>signature radius</strong> and <strong>velocity</strong>. <strong>Vorton Projectors</strong> are turrets that use missile weapon mechanics.</li>
+            <li><strong>Drones</strong> are small combat platforms launched from some ships that continuously do damage to a target for as long as they are active. They have damage mechanics similar to Turrets, though they tend to have an easier time hitting things. They also have limited health pools and are destroyed when these pools are depleted.</li>
+          </ul>
+          <p><strong>Turret weapons</strong> come in two varieties for each type: a short-ranged, high-DPS, high-tracking variety and a long-ranged, low-DPS, low-tracking variety. Turrets can be loaded with different types of ammunition, which changes the damage output and effective range of these weapons, and in the case of Projectile weapons can also change the type of damage being dealt.</p>
+          <p>There are several types of turrets:</p>
+          <ul>
+            <li><strong>Energy Weapons</strong> use crystals that slowly deplete with each shot. A single crystal can last for several hundred shots, or even an unlimited use for some. Energy weapons consume large amounts of capacitor energy with each shot, and tend to feature moderate ranges overall. They come in two varieties: the short-ranged <strong>Pulse Lasers</strong> and the long-ranged <strong>Beam Lasers</strong>. Energy weapons do Thermal and EM damage, making them very effective against shields but less effective against armor.</li>
+            <li><strong>Hybrid Weapons</strong> use hybrid charges that are consumed with each shot. Hybrid weapons consume moderate amounts of capacitor, and offer the widest selection for damage and range. <strong>Blasters</strong> have the highest DPS and shortest range of all of the turrets, while <strong>Railguns</strong> have the lowest DPS but the longest range of all of the turrets. Hybrid weapons do Thermal and Kinetic damage, making them relative all-rounders.</li>
+            <li><strong>Projectile Weapons</strong> use projectile ammunition that is consumed per-shot. Projectile weapons do not consume capacitor at all, and feature short optimal ranges but very long falloff ranges. This means that while they're not going to be fully effective as far out their damage will apply more consistently at a longer set of ranges. Projectile turrets are unique among turreted weapons in that their damage type is selectable to an extent, though they always do kinetic damage and almost always do explosive damage.</li>
+            <li><strong>Entropic Disintegrators</strong> use exotic plasma ammunition, which is consumed per cycle. Entropic Disintegrators consume large amounts of capacitor, and have a unique damage mechanic. They start with relatively low damage compared to weapons of their size but their damage increases per cycle until it reaches a cap. In other words, the longer these weapons are firing, the more damage they do. They do thermal and explosive damage, and have no falloff range. Once a target exceeds their optimal range, they can no longer fire on it.</li>
+          </ul>
+          <p><strong>Missile weapons</strong> also come in two varieties, but medium and larger turrets have a third variety that fires ammunition one size smaller than is typical, with a long reload but a high fire rate. Missiles' damage is fully configurable, with four types of ammunition each dealing damage of a single type. This gives missiles unparalleled versatility.</p>
+          <p><strong>Vorton Projectors</strong> work similarly to Entropic Disintegrators, but with the spooling damage mechanic replaced with a damage arcing mechanic. Shots fired by Vorton Projectors arc from their primary target to up to nine additional ships up to 10km away, making them excellent for dealing with drone ships. They deal EM and kinetic damage, and have fairly low-single target DPS compensated by relatively long ranges, though like Entropic Disintegrators they have no falloff range.</p>
+          <p><strong>Drones</strong> require a Drone Bay built into a ship to use. You can use up to five drones at a time, limited by your Drones skill level and the amount of drone bandwidth your ship has. Drones attack targets you designate or anything that attacks you, and continue firing on targets even if you lose your lock on them. This makes them great counters to ECM ships. Each faction's drones do two different types of damage.</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="high_slots">
+        <header><span class="header">High Slots</span></header>
+        <article>
+          <p></p>
+          <p></p>
+        </article>
+      </section>
+
+      <section class="main-section" id="mid_slots">
+        <header><span class="header">Mid Slots</span></header>
+        <article>
+          <p></p>
+          <p></p>
+        </article>
+      </section>
+
+      <section class="main-section" id="low_slots">
+        <header><span class="header">Low Slots</span></header>
+        <article>
+          <p></p>
+          <p></p>
+        </article>
+      </section>
+
+      <section class="main-section" id="rigs">
+        <header><span class="header">Rigs</span></header>
+        <article>
+          <p></p>
+          <p></p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
