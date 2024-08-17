@@ -1,0 +1,84 @@
+html {
+  font-family: "Tahoma", sans-serif;
+}
+
+.header {
+  font-weight: 600;
+  font-size: 21px;
+}
+
+p {
+  text-indent: 20px;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre-line;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1;
+  background-color: #F7F7F7;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 480px) {
+  #navbar {
+    min-width: 0px;
+    width: 0px;
+  }
+
+  #main-doc {
+    width: 100%;
+  }
+}
+
+#navbar {
+  position: fixed;
+  min-width: 100px;
+  top: 0px;
+  left: 0px;
+  width: 150px;
+  height: 100%;
+  border-right: solid;
+  border-color: #F7F7F7;
+}
+
+#navbar li {
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+li {
+  display: list-item;
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 160px;
+  padding: 20px;
+  margin-bottom: 110px;
+}
